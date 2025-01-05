@@ -1,0 +1,99 @@
+
+body {
+    background-color: whitesmoke;
+    font-family: Verdana, sans-serif;
+    font-weight: bolder;
+}
+.hover-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-weight: 600;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    color: #555;
+}
+/* Navbar Center Alignment */
+.navbar .container-fluid {
+    display: flex;
+    justify-content: flex-start; /* Slightly left */
+    gap: 30px; /* Space between links */
+}
+
+/* Initial Navbar Styles */
+#navbar {
+    background-color: whitesmoke;
+    transition: background-color 0.3s ease;
+}
+#navbar.scrolled {
+    background-color: #438b54 !important; /* Green Background */
+}
+.nav-link,
+.navbar-brand {
+    color: black;
+    transition: color 0.3s ease;
+}
+#navbar.scrolled .nav-link,
+#navbar.scrolled .navbar-brand {
+    color: black;
+}
+hr {
+    border: none;
+    border-top: 2px solid #438b54;
+    margin: 40px 0;
+}
+/* Ensure consistent spacing between rows */
+.row {
+    margin-bottom: 20px;
+}
+
+/* Adjust heading margins */
+h2 {
+    margin-bottom: 20px;
+    text-align: center; /* Center-align heading */
+}
+
+/* Fix card spacing on smaller screens */
+.card {
+    margin-bottom: 20px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 576px) {
+    .row {
+        margin-bottom: 30px;
+    }
+
+    h2 {
+        font-size: 1.8rem; /* Adjust heading size for small screens */
+    }
+
+    .card {
+        margin-bottom: 25px; /* Increase spacing between cards */
+    }
+}
+#home {
+    height: 50vh;
+    margin-bottom: 0; /* Adjust this value to reduce the gap */
+}
+#my-projects {
+    padding-top: 10px; /* Reduced from 40px or default */
+}
+ /* Highlight navbar links on hover */
+ .navbar .nav-link:hover {
+    color: #438b54; /* Change the text color on hover */
+    text-decoration: underline; /* Optional: add an underline effect */
+}
