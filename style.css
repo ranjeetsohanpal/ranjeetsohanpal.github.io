@@ -97,3 +97,17 @@ h2 {
     color: #438b54; /* Change the text color on hover */
     text-decoration: underline; /* Optional: add an underline effect */
 }
+.centered-image {
+    display: block;
+    margin: 0 auto;   /* Centers the image horizontally */
+    width: 50%;        /* Adjust the width as needed (can use px, % or vw) */
+    height: auto;      /* Maintains the aspect ratio */
+}
+
+/* If you want the image to be a fixed size */
+.centered-image {
+    display: block;
+    margin: 0 auto;
+    width: 600px;      /* Set to your desired width */
+    height: 600px;     /* Set to your desired height */
+}
