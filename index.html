@@ -1,143 +1,171 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ranjeet Singh 💼</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 1  rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ranjeet Singh 💼</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .timeline {
+      position: relative;
+      margin: 0 auto;
+      padding-left: 30px;
+      border-left: 3px solid #0052CC;
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 30px;
+    }
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -10px;
+      top: 5px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: #0052CC;
+      border: 3px solid #fff;
+    }
+    .timeline-content {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .timeline-content h5 {
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    .timeline-content small {
+      background-color: #0052CC;
+      color: #fff;
+      padding: 4px 8px;
+      border-radius: 12px;
+      font-size: 0.8rem;
+      float: right;
+    }
+  </style>
 </head>
 <body>
-    
-    <nav id="navbar" class="navbar navbar-expand-lg sticky-top bg-body-primary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#home" style="font-weight: bold;">Ranjeet Singh</a>
-            <a class="nav-link" href="#my-projects">Projects</a>
-            <a class="nav-link" href="#contact">Contact Me</a>
+
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#home">Ranjeet Singh</a>
+      <div class="d-flex">
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#skills">Skills</a>
+        <a class="nav-link" href="#resume">Resume</a>
+        <a class="nav-link" href="#my-projects">Projects</a>
+        <a class="nav-link" href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <section id="home" class="hero-section">
+    <div class="hero-content text-center">
+      <h1>Welcome to My Portfolio</h1>
+      <p>
+        Hi! I'm <strong class="highlight">Ranjeet Singh</strong>. I specialize in Big Data projects and love turning data into actionable insights. I'm actively seeking collaborative opportunities.
+      </p>
+    </div>
+  </section>
+
+  <section id="about" class="py-5 bg-white">
+    <div class="container text-center">
+      <h2>About Me</h2>
+      <p class="mt-3">
+        I'm a Data Enthusiast with a background in Electrical Engineering, currently focusing on Big Data applications using Python, SQL, and analytical tools. I enjoy uncovering insights from complex datasets and solving impactful problems. I am looking forward to contribute and collaborate. Let's connect!
+      </p>
+    </div>
+  </section>
+
+  <section id="skills" class="py-5">
+    <div class="container text-center">
+      <h2>Skills & Tools</h2>
+      <div class="row mt-4">
+        <div class="col-md-4">
+          <h5>Languages</h5>
+          <p>Python, SQL, JavaScript, Bash</p>
         </div>
-    </nav>
-    <div class = "container justify-content-center align-items">
-    <!-- Introductory Text -->
-    <div class="container vh-100 d-flex flex-column justify-content-center align-items-center text-center">
-        <section id="home" style="height: 50vh;">
-            <h1 class="mb-3">Welcome to My Portfolio</h1>
-        <p class="lead">
-            Hi! I'm <span style="color: #438b54; font-weight: bolder;">Ranjeet Singh</span>. I work on projects involving Big Data independently. I am looking forward to opportunities to collaborate and contribute. Let's connect!
-        </p>
-    </section>
+        <!-- <div class="col-md-4">
+          <h5>Big Data</h5>
+          <p>Hadoop, Spark, Hive, Kafka</p>
+        </div> -->
+        <div class="col-md-4">
+          <h5>Tools & Platforms</h5>
+          <p>Power BI, Git, Jupyter, Docker</p>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <div class="container my-5">
-        <section id="my-projects">
-            <h2 class="mb-4">My Projects</h2>
-    
-            <div class="row g-4">
-                <div class="col-lg-6 col-12">
-                    <a href="project_links/alzheimer_project/alzheimers.html" class="text-decoration-none text-dark">
-                        <div class="card shadow-sm h-100 border-0 hover-card">
-                            <img src="images/alzheimers.jpg" class="card-img-top" alt="Data Science Project">
-                            <div class="card-body">
-                                <h5 class="card-title">Alzheimer's Disease Diagnosis</h5>
-                                <p class="card-text">Analysing various features and their correlation with the diagnosis and building a predictive model.</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-6 col-12">
-                    <a href="project_links/random_svd/randomizedsvd.html" class="text-decoration-none text-dark">
-                        <div class="card shadow-sm h-100 border-0 hover-card">
-                            <img src="images/svd.png" class="card-img-top" alt="Data Science Project">
-                            <div class="card-body">
-                                <h5 class="card-title">Data Dimensionality Reduction using Randomized SVD</h5>
-                                <p class="card-text">Using Randomized SVD to compress synchrophasor data for analysis.</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-    
-            <div class="row g-4 mt-4">
-                <div class="col-lg-6 col-12">
-                    <a href="project_links/laptop_price/laptopprice.html" class="text-decoration-none text-dark">
-                        <div class="card shadow-sm h-100 border-0 hover-card">
-                            <img src="images/laptopprice.jpg" class="card-img-top" alt="Data Science Project">
-                            <div class="card-body">
-                                <h5 class="card-title">Laptop Price Predictor</h5>
-                                <p class="card-text">Predicting price of the laptop based on specifications input by the user.</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-6 col-12">
-                    <a href="project_links/book_reco/bookreco.html" class="text-decoration-none text-dark">
-                        <div class="card shadow-sm h-100 border-0 hover-card">
-                            <img src="images/books'.jpg" class="card-img-top" alt="Data Science Project">
-                            <div class="card-body">
-                                <h5 class="card-title">Book Recommendations System</h5>
-                                <p class="card-text">Discover your next read! Enter a book title to get 4 personalized recommendations of similar books.</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </section>
+  <section id="resume" class="py-5 bg-white">
+    <div class="container">
+      <h2 class="text-center mb-4"><i class="fas fa-graduation-cap me-2"></i>Academics</h2>
+      <p class="text-center mb-5">Here’s a snapshot of my educational journey.</p>
+
+      <div class="timeline">
+        <!-- <div class="timeline-item">
+          <div class="timeline-content">
+            <h5>Master of Data Science <small>2026 - 2028</small></h5>
+            <p><strong>Murdoch University, Australia</strong></p>
+            <p>Advanced coursework and research in machine learning, big data frameworks, cloud computing, and data visualization.</p>
+          </div>
+        </div> -->
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h5>Bachelor of Technology in Electrical Engineering <small>2021 - 2025</small></h5>
+            <p><strong>Indian Institute of Technology, Rupnagar (IITRPR)</strong></p>
+          </div>
+        </div>
+      </div>
     </div>
-</div>    
-    
-    
-    
+  </section>
 
-    <!-- Footer Section -->
+  <section id="my-projects" class="projects-section py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Projects</h2>
+      <div class="row g-4">
+        <!-- Add Project Cards Here -->
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section py-5">
+    <div class="container text-center">
+      <h2>Contact Me</h2>
+      <ul class="list-unstyled">
+        <li class="mb-3">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:sohanpalranjeet@gmail.com">sohanpalranjeet@gmail.com</a>
+        </li>
+        <li class="mb-3">
+          <i class="fab fa-linkedin"></i>
+          <a href="https://www.linkedin.com/in/ranjeetsinghiitrpr" target="_blank">LinkedIn</a>
+        </li>
+        <li>
+          <i class="fab fa-github"></i>
+          <a href="https://github.com/ranjeetsohanpal" target="_blank">GitHub</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="py-4 bg-light text-center">
+    <p>© 2025 Ranjeet Singh. Built with HTML, JS & ❤️</p>
     <div>
-        <section id="contact" style="background-color: #438b54; color: black; padding: 30px 0;">
-            <div class="container text-center">
-                <h2 class="major mb-4">Contact Me</h2>
-                <ul class="list-unstyled contact">
-                    <li class="mb-3">
-                        <i class="fas fa-envelope me-2" style = "color: black;"></i> 
-                        <a href="mailto:sohanpalranjeet@gmail.com" target="_blank" style="color: black; text-decoration: none;">sohanpalranjeet@gmail.com</a>
-                    </li>
-                    <li class="mb-3">
-                        <i class="fab fa-linkedin me-2" style = "color: black;"></i> 
-                        <a href="https://www.linkedin.com/in/ranjeetsinghiitrpr" target="_blank" style="color: black; text-decoration: none;">Ranjeet Singh</a>
-                    </li>
-                    <li>
-                        <i class="fab fa-github me-2" style = "color: black;"></i> 
-                        <a href="https://github.com/ranjeetsohanpal" target="_blank" style="color: black; text-decoration: none;">@ranjeetsohanpal</a>
-                    </li>
-                </ul>
-            </div>
-        </section>
+      <a href="#home">Home</a> | 
+      <a href="#projects">Projects</a> | 
+      <a href="#contact">Contact</a>
     </div>
+  </footer>
 
-
-    <!-- Font Awesome CDN for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-    <script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.scrollex.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
-    <script>
-        document.addEventListener("scroll", function () {
-            const navbar = document.getElementById("navbar");
-            if (window.scrollY > 50) {
-                navbar.classList.add("scrolled");
-            } else {
-                navbar.classList.remove("scrolled");
-            }
-        });
-        </script>
-        
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
-
