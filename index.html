@@ -5,22 +5,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ranjeet Singh 💼</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
   <style>
     html {
       scroll-behavior: smooth;
     }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    /* Sidebar styles */
+    .vertical-navbar {
+      width: 200px;
+      background-color: #fff;
+      box-shadow: -2px 0 8px rgba(0, 0, 0, 0.05);
+      transition: transform 0.4s ease-in-out;
+      transform: translateX(0);
+      z-index: 1040;
+      border-left: 1px solid #e1e4e8;
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100vh;
+    }
+
+    .vertical-navbar.collapsed {
+      transform: translateX(100%);
+    }
+
+    #sidebarToggle {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+
+    #sidebarTrigger {
+      z-index: 1050;
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      display: block;
+    }
+
     .timeline {
       position: relative;
       margin: 0 auto;
       padding-left: 30px;
       border-left: 3px solid #0052CC;
     }
+
     .timeline-item {
       position: relative;
       margin-bottom: 30px;
     }
+
     .timeline-item::before {
       content: "";
       position: absolute;
@@ -32,16 +72,19 @@
       background-color: #0052CC;
       border: 3px solid #fff;
     }
+
     .timeline-content {
       background: #fff;
       padding: 20px;
       border-radius: 8px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
+
     .timeline-content h5 {
       margin-bottom: 5px;
       font-weight: bold;
     }
+
     .timeline-content small {
       background-color: #0052CC;
       color: #fff;
@@ -50,122 +93,164 @@
       font-size: 0.8rem;
       float: right;
     }
+
+    body.sidebar-open {
+      margin-right: 200px;
+    }
+
+    /* Navigation links inside sidebar */
+    .vertical-navbar .nav-link {
+      color: #333;
+      font-weight: 500;
+      margin: 0.5rem 0;
+    }
+
+    .vertical-navbar .nav-link:hover {
+      color: #0052CC;
+    }
+
+    .vertical-navbar .navbar-brand {
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .hero-section {
+      padding: 100px 20px 60px;
+      text-align: center;
+      background-color: #f7f9fb;
+    }
+
+    footer {
+      background-color: #f0f0f0;
+    }
   </style>
 </head>
+
 <body>
 
-  <nav class="navbar navbar-expand-lg sticky-top">
-    <div class="container">
-      <a class="navbar-brand" href="#home">Ranjeet Singh</a>
-      <div class="d-flex">
-        <a class="nav-link" href="#about">About</a>
-        <a class="nav-link" href="#skills">Skills</a>
-        <a class="nav-link" href="#resume">Resume</a>
-        <a class="nav-link" href="#my-projects">Projects</a>
-        <a class="nav-link" href="#contact">Contact</a>
+<!-- External toggle button -->
+<button id="sidebarTrigger" class="btn btn-primary">
+  <i class="fas fa-bars"></i>
+</button>
+
+<!-- Sidebar -->
+<nav id="sidebar" class="vertical-navbar collapsed d-flex flex-column align-items-center py-4">
+  <button id="sidebarToggle" class="btn btn-sm btn-outline-primary mb-3">
+    <i class="fas fa-times"></i>
+  </button>
+  <a class="navbar-brand" href="#home">Ranjeet</a>
+  <a class="nav-link" href="#about">About</a>
+  <a class="nav-link" href="#skills">Skills</a>
+  <a class="nav-link" href="#resume">Resume</a>
+  <a class="nav-link" href="#my-projects">Projects</a>
+  <a class="nav-link" href="#contact">Contact</a>
+</nav>
+
+<section id="home" class="hero-section">
+  <h1>Welcome to My Portfolio</h1>
+  <p>Hi! I'm <strong class="highlight">Ranjeet Singh</strong>. I specialize in Big Data projects and love turning data into actionable insights. I'm actively seeking collaborative opportunities.</p>
+</section>
+
+<section id="about" class="py-5 bg-white">
+  <div class="container text-center">
+    <h2>About Me</h2>
+    <p class="mt-3">
+      I'm a Data Enthusiast with a background in Electrical Engineering, currently focusing on Big Data applications using Python, SQL, and analytical tools. I enjoy uncovering insights from complex datasets and solving impactful problems.
+    </p>
+  </div>
+</section>
+
+<section id="skills" class="py-5">
+  <div class="container text-center">
+    <h2>Skills & Tools</h2>
+    <div class="row mt-4">
+      <div class="col-md-4">
+        <h5>Languages</h5>
+        <p>Python, SQL, JavaScript, Bash</p>
+      </div>
+      <div class="col-md-4">
+        <h5>Tools & Platforms</h5>
+        <p>Power BI, Git, Jupyter, Docker</p>
       </div>
     </div>
-  </nav>
+  </div>
+</section>
 
-  <section id="home" class="hero-section">
-    <div class="hero-content text-center">
-      <h1>Welcome to My Portfolio</h1>
-      <p>
-        Hi! I'm <strong class="highlight">Ranjeet Singh</strong>. I specialize in Big Data projects and love turning data into actionable insights. I'm actively seeking collaborative opportunities.
-      </p>
-    </div>
-  </section>
-
-  <section id="about" class="py-5 bg-white">
-    <div class="container text-center">
-      <h2>About Me</h2>
-      <p class="mt-3">
-        I'm a Data Enthusiast with a background in Electrical Engineering, currently focusing on Big Data applications using Python, SQL, and analytical tools. I enjoy uncovering insights from complex datasets and solving impactful problems.
-      </p>
-    </div>
-  </section>
-
-  <section id="skills" class="py-5">
-    <div class="container text-center">
-      <h2>Skills & Tools</h2>
-      <div class="row mt-4">
-        <div class="col-md-4">
-          <h5>Languages</h5>
-          <p>Python, SQL, JavaScript, Bash</p>
-        </div>
-        <!-- <div class="col-md-4">
-          <h5>Big Data</h5>
-          <p>Hadoop, Spark, Hive, Kafka</p>
-        </div> -->
-        <div class="col-md-4">
-          <h5>Tools & Platforms</h5>
-          <p>Power BI, Git, Jupyter, Docker</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="resume" class="py-5 bg-white">
-    <div class="container">
-      <h2 class="text-center mb-4"><i class="fas fa-graduation-cap me-2"></i>Academics</h2>
-      <p class="text-center mb-5">Here’s a snapshot of my educational journey.</p>
-
-      <div class="timeline">
-        <!-- <div class="timeline-item">
-          <div class="timeline-content">
-            <h5>Master of Data Science <small>2026 - 2028</small></h5>
-            <p><strong>Murdoch University, Australia</strong></p>
-            <p>Advanced coursework and research in machine learning, big data frameworks, cloud computing, and data visualization.</p>
-          </div>
-        </div> -->
-        <div class="timeline-item">
-          <div class="timeline-content">
-            <h5>Bachelor of Technology in Electrical Engineering <small>2021 - 2025</small></h5>
-            <p><strong>Indian Institute of Technology, Rupnagar (IITRPR)</strong></p>
-          </div>
+<section id="resume" class="py-5 bg-white">
+  <div class="container">
+    <h2 class="text-center mb-4"><i class="fas fa-graduation-cap me-2"></i>Academics</h2>
+    <p class="text-center mb-5">Here’s a snapshot of my educational journey.</p>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h5>Bachelor of Technology in Electrical Engineering <small>2021 - 2025</small></h5>
+          <p><strong>Indian Institute of Technology, Rupnagar (IITRPR)</strong></p>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="my-projects" class="projects-section py-5">
-    <div class="container">
-      <h2 class="text-center mb-4">Projects</h2>
-      <div class="row g-4">
-        <!-- Add Project Cards Here -->
-      </div>
+<section id="my-projects" class="projects-section py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Projects</h2>
+    <div class="row g-4">
+      <!-- Add your project cards here -->
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="contact" class="contact-section py-5">
-    <div class="container text-center">
-      <h2>Contact Me</h2>
-      <ul class="list-unstyled">
-        <li class="mb-3">
-          <i class="fas fa-envelope"></i>
-          <a href="mailto:sohanpalranjeet@gmail.com">sohanpalranjeet@gmail.com</a>
-        </li>
-        <li class="mb-3">
-          <i class="fab fa-linkedin"></i>
-          <a href="https://www.linkedin.com/in/ranjeetsinghiitrpr" target="_blank">LinkedIn</a>
-        </li>
-        <li>
-          <i class="fab fa-github"></i>
-          <a href="https://github.com/ranjeetsohanpal" target="_blank">GitHub</a>
-        </li>
-      </ul>
-    </div>
-  </section>
+<section id="contact" class="contact-section py-5">
+  <div class="container text-center">
+    <h2>Contact Me</h2>
+    <ul class="list-unstyled">
+      <li class="mb-3">
+        <i class="fas fa-envelope"></i>
+        <a href="mailto:sohanpalranjeet@gmail.com">sohanpalranjeet@gmail.com</a>
+      </li>
+      <li class="mb-3">
+        <i class="fab fa-linkedin"></i>
+        <a href="https://www.linkedin.com/in/ranjeetsinghiitrpr" target="_blank">LinkedIn</a>
+      </li>
+      <li>
+        <i class="fab fa-github"></i>
+        <a href="https://github.com/ranjeetsohanpal" target="_blank">GitHub</a>
+      </li>
+    </ul>
+  </div>
+</section>
 
-  <footer class="py-4 bg-light text-center">
-    <p>© 2025 Ranjeet Singh. Built with HTML, JS & ❤️</p>
-    <div>
-      <a href="#home">Home</a> | 
-      <a href="#projects">Projects</a> | 
-      <a href="#contact">Contact</a>
-    </div>
-  </footer>
+<footer class="py-4 text-center">
+  <p>© 2025 Ranjeet Singh. Built with HTML, JS & ❤️</p>
+  <div>
+    <a href="#home">Home</a> | 
+    <a href="#projects">Projects</a> | 
+    <a href="#contact">Contact</a>
+  </div>
+</footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const sidebar = document.getElementById("sidebar");
+    const internalToggle = document.getElementById("sidebarToggle");
+    const externalTrigger = document.getElementById("sidebarTrigger");
+
+    function openSidebar() {
+      sidebar.classList.remove("collapsed");
+      document.body.classList.add("sidebar-open");
+      externalTrigger.style.display = "none";
+    }
+
+    function closeSidebar() {
+      sidebar.classList.add("collapsed");
+      document.body.classList.remove("sidebar-open");
+      externalTrigger.style.display = "block";
+    }
+
+    internalToggle.addEventListener("click", closeSidebar);
+    externalTrigger.addEventListener("click", openSidebar);
+  });
+</script>
+
 </body>
 </html>
